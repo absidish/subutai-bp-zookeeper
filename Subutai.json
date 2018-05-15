@@ -3,25 +3,29 @@
   "description": "Apache Zookeeper",
   "version": "0.1.3",
   "author": "https://github.com/niclash",
+  "ssh-key": "niclas",
   "containers": [
     {
       "hostname": "zookeeper",
       "template": "debian-stretch",
-      "peer-criteria": "gr1",
+      "peer-criteria": "SRV-GROUP",
+      "peer-layout": "zk",
       "size": "${containerSize}",
-      "peer-layout": "d1"
+      "port-mapping": [
+      ]
     }
   ],
   "peer-layouts": [
     {
-      "name": "d1",
+      "name": "zk",
       "peer-count": "3",
       "container-per-peer": "1"
     }
   ],
   "peer-criteria": [
     {
-      "name": "gr1"
+      "name": "SRV-GROUP",
+      "max-price": "25"
     }
   ],
   "ansible-configuration": {
