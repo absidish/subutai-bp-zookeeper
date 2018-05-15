@@ -3,7 +3,6 @@
   "description": "Apache Zookeeper",
   "version": "0.1.3",
   "author": "https://github.com/niclash",
-  "ssh-key": "niclas",
   "containers": [
     {
       "hostname": "zookeeper",
@@ -59,7 +58,7 @@
     ],
     "groups": [
       {
-        "name": "zookeeper",
+        "name": "zk",
         "hostnames": [
           "zookeeper"
         ]
