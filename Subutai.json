@@ -8,11 +8,11 @@
       "hostname": "zookeeper",
       "template": "debian-stretch",
       "peer-criteria": "gr1",
-      "peer-layout": "d1",
-      "size": "${containerSize}"
+      "size": "${containerSize}",
+      "peer-layout": "d1"
     }
   ],
-  "peer-layout": [
+  "peer-layouts": [
     {
       "name": "d1",
       "peer-count": "3",
